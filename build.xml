@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Oct 10, 2014 1:08:56 PM                                                        
+
+     ec_local_build    
+     (C) Kana Software 2014. All Rights Reserved.
+                   
+     jverderber                                                                
+     ====================================================================== -->
+<project name="ec_local_build" default="default">
+    <description>
+            (C) Kana Software 2014. All Rights Reserved.
+    </description>
+
+	<property name="outputproperty"/>
+   
+    <target name="default" description="(C) Kana Software 2014. All Rights Reserved.">
+        <exec dir="C:/KanaEnterprise/KE13R2/ElectionsCanada/AgentDesktop/bin" outputproperty="outproperty" failonerror="true" failifexecutionfails="true" timeout="720000" executable="C:/KanaEnterprise/KE13R2/ElectionsCanada/AgentDesktop/bin/ccadmin.bat" >
+        	<arg value="stop-appserver"/> 	
+        </exec>
+    	<sleep seconds="5"/>
+    	<echo message="${outputproperty}"></echo>
+    </target>
+
+   
+
+</project>
